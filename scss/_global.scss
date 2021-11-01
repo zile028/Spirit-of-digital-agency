@@ -1,0 +1,28 @@
+h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+p,
+a {
+  font-size: 1.1rem;
+}
+a {
+  font-weight: 600;
+  &:hover {
+    color: $linkColor;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2.5em;
+  border: 2px solid $linkColor;
+  border-radius: 2em;
+  color: $white;
+  background-color: $linkColor;
+  transition: background-color $transition, color 0s;
+  &:hover {
+    background-color: $white;
+    color: $textColor;
+  }
+}
