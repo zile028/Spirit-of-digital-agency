@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
   font-family: $headings;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 ul {
@@ -56,7 +56,7 @@ img {
 }
 .container {
   width: $containerWidth;
-  max-width: 1140px;
+  max-width: 1110px;
   margin: 0 auto;
   @media (max-width: 1140px) {
     // width: 95%;
