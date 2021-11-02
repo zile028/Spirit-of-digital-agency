@@ -35,3 +35,10 @@ a {
     color: $textColor;
   }
 }
+
+.box {
+  @include flex(flex-start, flex-start, column);
+  box-shadow: $boxShadow;
+  padding: 40px 45px;
+  background-color: $white;
+}

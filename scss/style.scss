@@ -106,10 +106,6 @@ ABOUT
       & > div {
         flex: 0 0 31%;
         &.box {
-          @include flex(flex-start, flex-start, column);
-          box-shadow: $boxShadow;
-          padding: 40px 45px;
-          background-color: $white;
           div {
             flex: 1;
           }
@@ -215,4 +211,25 @@ PORTFOLIO
       height: 100%;
     }
   }
+}
+
+/**************
+BLOG
+**************/
+.blog {
+  // background-color: tomato;
+  .item {
+    background-color: #fff;
+    min-height: 330px;
+    // max-width: 370px;
+    // padding: 50px 25px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
+    box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
+    // margin: 10px;
+    // margin-right: 10px;
+  }
+}
+
+.blog-box {
 }

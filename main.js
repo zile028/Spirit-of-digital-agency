@@ -1,8 +1,16 @@
-$(".multiple-items").slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  speed: 400,
-  autoplay: true,
-  arrows: true,
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 3,
+    },
+  },
 });
