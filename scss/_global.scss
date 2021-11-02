@@ -9,6 +9,12 @@ h3 {
 }
 h5 {
   font-size: 1rem;
+  color: $linkColor;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+h6 {
+  font-size: 1rem;
 }
 p,
 a {
@@ -41,4 +47,23 @@ a {
   box-shadow: $boxShadow;
   padding: 40px 45px;
   background-color: $white;
+}
+
+aside {
+  z-index: -1;
+  position: absolute;
+  img {
+    height: 100%;
+  }
+  &.left {
+    left: -20px;
+    bottom: 0;
+    top: 0;
+  }
+  &.right {
+    right: -20px;
+    top: 20%;
+    bottom: 0;
+    height: 100%;
+  }
 }

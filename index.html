@@ -23,19 +23,25 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <nav class="container">
             <div class="brand">
                 <a href="index.html"><img src="img/logo.svg" alt=""></a>
             </div>
-            <div class="menu">
+            <button class="menuBtn"><i class="fas fa-bars"></i></button>
+            <div id="menuList" class="menu">
                 <ul>
                     <li><a href="#home">Home.</a></li>
                     <li><a href="#about">About Us.</a></li>
                     <li><a href="#portfolio">Portfolio.</a></li>
                     <li><a href="#blog">Blog.</a></li>
                     <li><a href="#contact">Contact Us.</a></li>
-                    <li><a class="lang" href="#">EN</a></li>
+                    <li class="drop"><a class="lang" href="#">EN</a>
+                        <ul>
+                            <li><a href="#de">DE</a></li>
+                            <li><a href="#es">ES</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="contact-btn">
@@ -54,7 +60,7 @@
         </article>
         <img src="img/header-bg.svg" alt="">
     </header>
-    <section class="about">
+    <section id="about" class="about">
 
         <aside class="left">
             <img src="img/aside-left.svg" alt="">
@@ -110,7 +116,8 @@
 
     </section>
 
-    <section class="portfolio py">
+    <section id="portfolio" class="portfolio py">
+        <aside><img src="img/portfolio-side-bg.svg" alt=""></aside>
         <article class="container py">
             <h2>See some of our<br>
                 Creative work.</h2>
@@ -175,70 +182,107 @@
     </section>
 
     <!-- blog -->
-    <section class="blog container py">
+    <section id="blog" class="blog">
+        <aside class="right"><img src="img/blog-side-bg.svg" alt=""></aside>
+        <article class="container py">
+            <h5>BLOG STORIES</h5>
+            <h2>Check Our News</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="box first">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box">
+                        <h6>NEW ADVENTURE</h6>
+                        <span>17 March 2019</span>
+                        <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                            tincidunt.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 
-        <h5>BLOG STORIES</h5>
-        <h2>Check Our News</h2>
+    <!-- contact -->
+    <section class="contact container py" id="contact">
+        <h5>contact us</h5>
+        <h2>Get in Touch</h2>
 
-        <div class="owl-carousel owl-theme">
-            <div class="item box">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-            <div class="item">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-            <div class="item">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-            <div class="item">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-            <div class="item">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-            <div class="item">
-                <!-- Blog Post Title -->
-                <h6>NEW ADVENTURE</h6>
-                <!-- Blog Post Date -->
-                <p>17 March 2019</p>
-                <!-- Blog Post -->
-                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
-                    tincidunt.</p>
-            </div>
-        </div>
-
+        <form>
+            <input type="email" name="email" placeholder="Your email">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message here..." cols="30" rows="10"></textarea>
+            <button class="btn">Send Message</button>
+        </form>
 
     </section>
+
+    <!-- footer -->
+    <footer class="py">
+        <article class="container">
+            <h6>DOOB</h6>
+            <h2>creativity above</h2>
+            <ul>
+                <li><a href="#home">Home.</a></li>
+                <li><a href="#about">About Us.</a></li>
+                <li><a href="#portfolio">Portfolio.</a></li>
+                <li><a href="#blog">Blog.</a></li>
+                <li><a href="#contact">Contact Us.</a></li>
+            </ul>
+            <p>&copy; 2019 - Doob, All Right Reserved</p>
+            <div class="social">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-dribbble"></i></a>
+            </div>
+        </article>
+
+    </footer>
 
 
 

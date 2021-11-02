@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap");
 $headings: "Work Sans", sans-serif;
 $textFont: "Work Sans", sans-serif;
 $fontSize: 16px;
@@ -9,12 +9,12 @@ $black: #000000;
 $textColor: #314584;
 $linkColor: #ff3946;
 $gray: #6e757a;
-
+$lightGray: #f4fafe;
 $shadow: #1c1f21;
 
 $transition: 0.4s ease;
 
-$boxShadow: 0 10px 20px 0px rgba($shadow, 0.15);
+$boxShadow: 0px 0px 5px 0px rgba($shadow, 0.2);
 
 $py: 50px 0;
 $containerWidth: 100%;
