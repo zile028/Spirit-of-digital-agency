@@ -1,5 +1,10 @@
 h1 {
   font-size: 4.5rem;
+  text-shadow: 0 0 2px $white;
+  @media (max-width: 920px) {
+    font-size: 3.5rem;
+    text-align: center;
+  }
 }
 h2 {
   font-size: 2.5rem;
@@ -52,6 +57,7 @@ a {
 aside {
   z-index: -1;
   position: absolute;
+  // overflow: hidden;
   img {
     height: 100%;
   }
@@ -61,7 +67,7 @@ aside {
     top: 0;
   }
   &.right {
-    right: -20px;
+    right: 0px;
     top: 20%;
     bottom: 0;
     height: 100%;

@@ -78,6 +78,14 @@ img {
 
 h1 {
   font-size: 4.5rem;
+  text-shadow: 0 0 2px #ffffff;
+}
+
+@media (max-width: 920px) {
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
 }
 
 h2 {
@@ -155,7 +163,7 @@ aside.left {
 }
 
 aside.right {
-  right: -20px;
+  right: 0px;
   top: 20%;
   bottom: 0;
   height: 100%;
@@ -384,15 +392,49 @@ header article p {
   line-height: 1.8;
 }
 
+@media (max-width: 920px) {
+  header article p {
+    margin: 20px 0;
+    text-shadow: 0 0 1px #314584;
+  }
+}
+
+@media (max-width: 920px) {
+  header article div {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 header article .btn {
   margin-right: 30px;
 }
 
-header > img {
-  z-index: -1;
-  position: absolute;
-  right: 0;
+@media (max-width: 920px) {
+  header article .btn {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+}
+
+header aside.right {
   top: 0;
+  transition: opacity 0.4s ease;
+}
+
+@media (max-width: 920px) {
+  header aside.right {
+    left: 0;
+    opacity: 0.4;
+  }
+}
+
+header aside.right img {
+  height: auto;
 }
 
 /*************
@@ -413,6 +455,20 @@ ABOUT
 
 .about .container:first-of-type > div {
   flex: 0 0 31%;
+  min-width: 320px;
+}
+
+@media (max-width: 1010px) {
+  .about .container:first-of-type > div {
+    flex: 1 0 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 920px) {
+  .about .container:first-of-type > div.box {
+    flex: 0 0 49%;
+  }
 }
 
 .about .container:first-of-type > div.box div {
@@ -451,6 +507,14 @@ ABOUT
 /*************
 PORTFOLIO
 *************/
+.portfolio {
+  position: relative;
+}
+
+.portfolio aside {
+  max-width: 100%;
+}
+
 .portfolio .row {
   display: flex;
   flex-wrap: wrap;
@@ -686,3 +750,4 @@ footer .social a {
 footer .social i {
   font-size: 2.5rem;
 }
+/*# sourceMappingURL=style.css.map */
