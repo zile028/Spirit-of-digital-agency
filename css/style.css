@@ -70,6 +70,12 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 1150px) {
+  .container {
+    width: 95%;
+  }
+}
+
 h1 {
   font-size: 4.5rem;
 }
@@ -175,6 +181,17 @@ header nav .brand {
   max-height: 30px;
 }
 
+@media (max-width: 920px) {
+  header nav .brand {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
 header nav .menu {
   display: flex;
   flex-wrap: wrap;
@@ -184,21 +201,33 @@ header nav .menu {
 }
 
 @media (max-width: 920px) {
+  header nav .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgba(49, 69, 132, 0.9);
+    min-height: 100vh;
+    transform-origin: right top;
+    transition: transform 0.4s ease;
+    transform: scale(0) rotate(90deg);
+    z-index: 1;
+  }
+}
+
+header nav .menu.active {
+  transform: scale(1) rotate(0deg);
+}
+
+@media (max-width: 920px) {
   header nav .menu ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    padding: 10px 0;
-    transform-origin: center top;
-    transition: transform 0.4s ease;
-    transform: scale(1, 0);
+    width: 100%;
   }
 }
 
@@ -209,7 +238,14 @@ header nav .menu ul li {
 
 @media (max-width: 920px) {
   header nav .menu ul li {
-    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 920px) {
+  header nav .menu ul li a {
+    line-height: 2;
+    font-size: 2rem;
   }
 }
 
@@ -222,7 +258,7 @@ header nav .menu ul li:hover {
 }
 
 header nav .menu ul.active {
-  transform: scale(1);
+  transform: scale(1, 1);
 }
 
 header nav .menu .lang::after {
@@ -232,12 +268,18 @@ header nav .menu .lang::after {
   margin-left: 10px;
 }
 
+@media (max-width: 920px) {
+  header nav .menu .lang::after {
+    content: "\f0da";
+  }
+}
+
 header nav .menu .drop {
   position: relative;
 }
 
 header nav .menu .drop:hover ul {
-  transform: scale(1, 1);
+  transform: scale(1, 1) translate(-50%, 0);
 }
 
 header nav .menu .drop ul {
@@ -252,11 +294,33 @@ header nav .menu .drop ul {
   border-radius: 5px;
 }
 
+@media (max-width: 920px) {
+  header nav .menu .drop ul {
+    display: block;
+    position: absolute;
+    transform-origin: left center;
+    left: 50%;
+    transform: scale(0, 1) translate(-50%, 0);
+  }
+}
+
 header nav .menu .drop ul li {
   display: block;
   padding: 10px 15px;
   text-align: center;
   margin: 0;
+}
+
+@media (max-width: 920px) {
+  header nav .menu .drop ul li {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 920px) {
+  header nav .contact-btn {
+    display: none;
+  }
 }
 
 header nav .contact-btn a {
@@ -276,16 +340,17 @@ header nav a {
 }
 
 header nav .menuBtn {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   align-self: center;
   font-size: 1.8rem;
   background: transparent;
-  color: #ffffff;
+  color: #314584;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.4s ease, color 0.4s ease;
   display: none;
+  z-index: 5;
 }
 
 @media (max-width: 920px) {
@@ -295,13 +360,13 @@ header nav .menuBtn {
 }
 
 header nav .menuBtn:hover {
-  background-color: #ffffff;
-  color: #000000;
+  color: #ff3946;
 }
 
 header nav .menuBtn.active {
-  background-color: #ffffff;
-  color: #000000;
+  position: fixed;
+  right: 2.5%;
+  color: #ff3946;
 }
 
 header article {
@@ -478,7 +543,7 @@ BLOG
 .blog aside {
   top: unset;
   bottom: 0;
-  right: -20px;
+  right: 0px;
   transform: translateY(50%);
 }
 

@@ -11,29 +11,48 @@ header {
   nav {
     @include flex($y: center);
     padding-top: 60px;
+
     .brand {
       max-height: 30px;
+      @media (max-width: 920px) {
+        @include flex(space-between, center);
+        width: 100%;
+      }
     }
     .menu {
       @include flex;
+      @media (max-width: 920px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: $white;
+        background-color: rgba($textColor, 0.9);
+        min-height: 100vh;
+        transform-origin: right top;
+        transition: transform $transition;
+        transform: scale(0) rotate(90deg);
+        z-index: 1;
+      }
+      &.active {
+        transform: scale(1) rotate(0deg);
+      }
       ul {
         @media (max-width: 920px) {
           @include flex(center, center, column);
-          background-color: rgba($black, 0.9);
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 100%;
-          padding: 10px 0;
-          transform-origin: center top;
-          transition: transform $transition;
-          transform: scale(1, 0);
+          width: 100%;
         }
         li {
           display: inline-block;
           margin-right: 20px;
           @media (max-width: 920px) {
-            width: 100%;
+            margin-right: 0px;
+          }
+          a {
+            @media (max-width: 920px) {
+              line-height: 2;
+              font-size: 2rem;
+            }
           }
           &:last-child {
             margin-right: 0;
@@ -43,7 +62,7 @@ header {
           }
         }
         &.active {
-          transform: scale(1);
+          transform: scale(1, 1);
         }
       }
       .lang {
@@ -52,13 +71,16 @@ header {
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-left: 10px;
+          @media (max-width: 920px) {
+            content: "\f0da";
+          }
         }
       }
       .drop {
         position: relative;
         &:hover {
           ul {
-            transform: scale(1, 1);
+            transform: scale(1, 1) translate(-50%, 0);
           }
         }
         ul {
@@ -71,16 +93,29 @@ header {
           width: 150px;
           right: 0;
           border-radius: 5px;
+          @media (max-width: 920px) {
+            display: block;
+            position: absolute;
+            transform-origin: left center;
+            left: 50%;
+            transform: scale(0, 1) translate(-50%, 0);
+          }
           li {
             display: block;
             padding: 10px 15px;
             text-align: center;
             margin: 0;
+            @media (max-width: 920px) {
+              display: inline-block;
+            }
           }
         }
       }
     }
     .contact-btn {
+      @media (max-width: 920px) {
+        display: none;
+      }
       a {
         background-color: $white;
         padding: 20px 55px;
@@ -97,26 +132,27 @@ header {
     }
 
     .menuBtn {
-      height: 50px;
-      width: 50px;
+      height: 30px;
+      width: 30px;
       align-self: center;
       font-size: 1.8rem;
       background: transparent;
-      color: $white;
+      color: $textColor;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color $transition, color $transition;
       display: none;
+      z-index: 5;
       @media (max-width: 920px) {
         display: block;
       }
       &:hover {
-        background-color: $white;
-        color: $black;
+        color: $linkColor;
       }
       &.active {
-        background-color: $white;
-        color: $black;
+        position: fixed;
+        right: 2.5%;
+        color: $linkColor;
       }
     }
   }
@@ -261,6 +297,7 @@ BLOG
 **************/
 .blog {
   position: relative;
+
   .owl-theme {
     margin-top: 30px;
     position: relative;
@@ -272,7 +309,7 @@ BLOG
   aside {
     top: unset;
     bottom: 0;
-    right: -20px;
+    right: 0px;
     transform: translateY(50%);
     img {
       width: 100%;
