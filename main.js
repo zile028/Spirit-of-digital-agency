@@ -5,6 +5,7 @@ $(".owl-carousel").owlCarousel({
   nav: true,
   dots: false,
   slideBy: 3,
+  center: true,
   navText: [
     '<i class="fas fa-long-arrow-alt-left"></i>',
     '<i class="fas fa-long-arrow-alt-right"></i>',

@@ -36,3 +36,20 @@
     background-color: $bgHover;
   }
 }
+
+@mixin fluid-font-size(
+  $max-width,
+  $vw-size,
+  $max-size,
+  $min-width: 280px,
+  $min-size: 1rem
+) {
+  font-size: $max-size;
+
+  @media (max-width: $max-width) {
+    font-size: $vw-size;
+  }
+  @media (max-width: $min-width) {
+    font-size: $min-size;
+  }
+}
