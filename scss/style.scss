@@ -3,9 +3,6 @@
 @import "basic";
 @import "global";
 
-section {
-}
-
 /**************
 HEADER
 **************/
@@ -14,7 +11,6 @@ header {
   nav {
     @include flex($y: center);
     padding-top: 60px;
-
     .brand {
       max-height: 30px;
       @media (max-width: 920px) {
@@ -29,12 +25,12 @@ header {
         top: 0;
         left: 0;
         width: 100%;
-        color: $white;
-        background-color: rgba($textColor, 0.9);
         min-height: 100vh;
         transform-origin: right top;
         transform: scale(0) rotate(90deg);
         z-index: 1;
+        color: $white;
+        background-color: rgba($textColor, 0.9);
         transition: transform $transition;
       }
       &.active {
@@ -293,12 +289,12 @@ PORTFOLIO
   }
   .row {
     @include flex(space-between);
+    text-align: center;
+
     @media (max-width: 650px) {
       justify-content: center;
     }
-    text-align: center;
-    aside.left {
-    }
+
     &.hiden {
       display: none;
     }
@@ -306,6 +302,7 @@ PORTFOLIO
     .wrapper {
       flex: 0 0 31%;
       max-width: 350px;
+      max-height: 245px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
